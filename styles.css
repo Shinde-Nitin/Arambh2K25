@@ -80,30 +80,6 @@ header {
     text-align: center;
 }
 
-@keyframes typing {
-    0% { width: 0; }
-    100% { width: 100%; }
-}
-
-/* #typing-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    border-right: 4px solid #ff6600;
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 5s steps(30) infinite;
-} */
-
-/* Additional styling for responsiveness */
-/* @media (max-width: 768px) {
-    #timer {
-        font-size: 2.5rem; 
-        padding: 15px 30px;
-    }
-} */
-
-
 /* Events Section */
 .events {
     background: white;
@@ -237,8 +213,7 @@ footer {
     padding: 20px;
 }
 
-
-
+/* News Ticker */
 .news-ticker {
     width: 100%;
     background-color: #ff6600;
@@ -256,4 +231,102 @@ footer {
 @keyframes scroll-left {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .cta-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .events {
+        padding: 40px;
+    }
+
+    .event {
+        width: 250px;
+    }
+
+    .event-list {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .event {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .event-list {
+        flex-direction: column;
+    }
+
+    .suggestion-form input, .suggestion-form textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .event {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .suggestion-form input, .suggestion-form textarea {
+        width: 95%;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
 }
