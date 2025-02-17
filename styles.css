@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #222;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
 /* Header */
@@ -18,7 +19,7 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #ff8c00;
 }
@@ -48,6 +49,10 @@ header {
     color: white;
     text-align: center;
     padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
 }
 
 .cta-btn {
@@ -225,11 +230,11 @@ footer {
 .news-ticker span {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-left 25s linear infinite;
+    animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {
-    0% { transform: translateX(100%); }
+    0% { transform: translateX(60%); }
     100% { transform: translateX(-100%); }
 }
 
@@ -255,6 +260,14 @@ footer {
     .event-list {
         justify-content: space-between;
     }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -274,6 +287,7 @@ footer {
     .nav-links {
         flex-direction: column;
         gap: 10px;
+        text-align: center;
     }
 
     .nav-links a {
@@ -292,6 +306,15 @@ footer {
     .suggestion-form input, .suggestion-form textarea {
         width: 90%;
     }
+
+    /* .logo {
+        display: none; 
+    }*/
+        /* Hides the "Arambh" logo on small screens */
+
+        .hero h1 {
+            font-size: 1.3rem;
+        }
 }
 
 @media (max-width: 480px) {
@@ -300,7 +323,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .cta-btn {
@@ -328,5 +351,51 @@ footer {
     footer {
         padding: 15px;
         font-size: 0.9rem;
+    }
+}
+
+/* Center navigation menu and make it responsive */
+header {
+    display: flex;
+    justify-content: center; /* Center header content */
+    align-items: center;
+    flex-wrap: wrap; /* Ensure wrapping on small screens */
+    padding: 15px 30px;
+}
+
+/* Adjust logo size for responsiveness */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff8c00;
+    text-align: center;
+}
+
+/* Center nav menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center navigation menu */
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem; /* Reduce size for smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Further reduce size on very small screens */
     }
 }
